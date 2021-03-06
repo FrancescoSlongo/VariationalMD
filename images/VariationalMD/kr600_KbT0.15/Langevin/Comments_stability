@@ -1,0 +1,2 @@
+Notice: the run with the circular and distance committors is unstable.
+Sometimes the trajectories are pushed too far from the product state and they explore a transition region that is not very good.
