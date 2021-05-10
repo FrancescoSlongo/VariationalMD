@@ -1,0 +1,21 @@
+
+ncomm 2              
+temperature 1.0      
+tstep 0.005           
+kratchet 150       
+MDsteps 15000        
+biassim 2000         
+selfsteps 10          
+alpha 0.5    
+threshold 0.001
+relaxation True
+relax 20
+xlimleft -2.0
+xlimright 2.0
+ylimdown -1.5
+ylimup 2.5
+delta 0.025
+namecoeff Coeff12.xyz
+nameprob Prob12.pdf
+
+        

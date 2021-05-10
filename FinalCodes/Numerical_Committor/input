@@ -1,0 +1,16 @@
+
+temperature 1.0
+diffusion 1.0
+tstep 0.01
+Nsim 1000
+stepsim 5000
+xlimleft -2.0
+xlimright 2.0
+nxstep 100
+ylimdown -1.5
+ylimup 2.5
+nystep 100
+namefile Numerical_Committor.xyz
+nameplot Numerical_Committor.pdf
+
+        

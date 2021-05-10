@@ -1,1 +1,0 @@
-Notice: the run with circular and distance committors is unstable at the beginning and the algorithm does not always find a reactive trajectory. Then if we wait, after a bit we do not have this problem anymore.
