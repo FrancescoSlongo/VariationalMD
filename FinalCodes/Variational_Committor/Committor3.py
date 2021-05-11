@@ -22,39 +22,7 @@ def dqLin(x,y):
     if x < -0.73 or x > 0.73:
         return 0.0, 0.0
     else:
-        return 1.0/(2.0*0.73), 0.0
-
-@njit(fastmath=True, cache=True)    
-def qCircleU(x,y):
-    if x == 0 and y == 0:
-        return 0.5
-    theta = np.arccos(-x/np.sqrt(x**2 + y**2))
-    alpha = np.arccos(1.0/np.sqrt(0.95**2+0.95**2))
-    if theta <= alpha:
-        return 0.0
-    elif theta > np.pi - alpha:
-        return 1.0
-    else:
-        if y < 0.0:
-            return 0.0
-        else:
-            return (theta - alpha)/(np.pi - alpha)
-
-@njit(fastmath=True, cache=True)        
-def dqCircleU(x,y):
-    if x == 0.0 and y == 0.0:
-        return 0.0, 0.0
-    theta = np.arccos(-x/np.sqrt(x**2 + y**2))
-    alpha = np.arccos(1.0/np.sqrt(0.95**2+0.95**2))
-    if theta <= alpha:
-        return 0.0, 0.0
-    elif theta > np.pi - alpha:
-        return 0.0, 0.0
-    else: 
-        if y > 0.0:
-            return y/(x**2 + y**2)/(np.pi - alpha), -x/(x**2 + y**2)/(np.pi - alpha)
-        else:
-            return 0.0, 0.0            
+        return 1.0/(2.0*0.73), 0.0         
 
 @njit(fastmath=True, cache=True)        
 def qDist(x,y):
@@ -90,8 +58,6 @@ def dqDist(x,y):
 def ListGuess(n,x,y):
     if n == 0:
         return qLin(x,y)
-    elif n == 1:
-        return qCircleU(x,y)
     else:
         return qDist(x,y)
     
@@ -99,7 +65,5 @@ def ListGuess(n,x,y):
 def ListdGuess(n,x,y):
     if n == 0:
         return dqLin(x,y)
-    elif n == 1:
-        return dqCircleU(x,y)
     else:
         return dqDist(x,y)
