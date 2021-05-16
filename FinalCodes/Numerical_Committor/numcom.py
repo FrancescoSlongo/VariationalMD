@@ -39,7 +39,7 @@ import time
 import tempfile
 
 ## Load potential, force and state
-from System_informations import potential, force, state
+from System_informations2 import potential, force, state
 
 def fmt(x, pos):
     # format for colorbars tick labels

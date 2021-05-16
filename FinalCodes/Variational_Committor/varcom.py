@@ -31,7 +31,7 @@ import time
 ## Load potential, force and state
 from System_informations2 import potential, force, state, start_pos
 ## Load committors
-from Committor3 import ListGuess, ListdGuess
+from Committor4 import ListGuess, ListdGuess
 
 def fmt(x, pos):
     # format for colorbars tick labels
